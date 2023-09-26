@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculator</title>
+    <style>
+        body {background-color:thistle}
+        h1 {color: darkred}
+        #submit{background-color:darkred; color: cornsilk; border: darkred 10px}
+    </style>
+</head>
+<body>
+    <h1>Cool Calculator</h1>
+    <div>
+        <input type="text" id="leftInput" placeholder="Left operand">
+        <select name="operator" id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="rightInput" placeholder="Right operand">
+        <hr>
+        <input type="button" id="submit" value="Try me!">
+    </div>
+    <script>
+        const leftInput = document.getElementById("leftInput");
+        const rightInput = document.getElementById("rightInput");
+        const operator = document.getElementById("operator");
+        const submitButton = document.getElementById("submit");
+
+        submitButton.addEventListener
+        ("click", function()
+            {
+                const leftOperand = parseInt(leftInput.value);
+                const rightOperand = parseInt(rightInput.value);
+                const selectedOperator = operator.value;
+
+                if (isNaN(leftOperand) || isNaN(rightOperand) || leftOperand < 0 || rightOperand < 0)
+                {
+                    console.log("Error :(");
+                    alert("Error :(");
+                } else
+                {
+                    let result;
+                    switch(selectedOperator)
+                    {
+                        case "+":
+                            result = leftOperand + rightOperand;
+                            break;
+                        case "-":
+                            result = leftOperand - rightOperand;
+                            break;
+                        case "*":
+                            result = leftOperand * rightOperand;
+                            break;
+                        case "/":
+                            if (rightOperand == 0)
+                            {
+                                console.log("It’s over 9000!");
+                                alert("It’s over 9000!");
+                                return;
+                            } else{
+                                result = leftOperand / rightOperand;
+                                break;}
+                        case "%":
+                            if (rightOperand == 0)
+                            {
+                                console.log("It’s over 9000!");
+                                alert("It’s over 9000!");
+                                return;
+                            } else{
+                                result = leftOperand % rightOperand;
+                                break;}
+                    }
+                    console.log(result);
+                    alert(result);
+                }
+            }
+        )
+    </script>
+</body>
+</html>

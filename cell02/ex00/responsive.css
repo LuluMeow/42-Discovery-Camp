@@ -1,0 +1,21 @@
+body 
+{margin: 0%}
+
+.left 
+{background-color: powderblue; 
+padding: 0%;
+border: 1px solid;}
+
+.right 
+{background-color: pink; 
+padding: 0%;
+border: 1px solid;}
+
+table 
+{border-collapse:collapse;
+width: 100%;
+height: 100%;
+text-align: left;}
+
+th 
+{width: 50%}

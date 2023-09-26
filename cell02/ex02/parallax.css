@@ -1,0 +1,38 @@
+body, html {
+    height: 100%;
+  }
+  
+.parallax1 {
+    height: 100%; 
+    background-image: url(assets/land.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+.parallax2 {
+    height: 100%; 
+    background-image: url(assets/nature.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+.block {
+    height:100px;
+    background-color:white;
+  }
+  
+h1 {
+    color: beige;
+    text-align: center;
+    padding-top: 600px;
+  }
+
+  p {
+    font-size: 30px;
+    padding: 25px;
+    text-align: center;
+  }
